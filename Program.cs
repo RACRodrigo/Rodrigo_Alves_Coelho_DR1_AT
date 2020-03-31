@@ -78,19 +78,22 @@ namespace Rodrigo_Alves_Coelho_DR1_AT
                     Console.WriteLine("Informe o nome do amigo que deseja adicionar");
                     var nomeAmigo = Console.ReadLine();
 
+                    Console.WriteLine("Digite o sobrenome do amigo:");
+                    var sobreNomeAmigo = Console.ReadLine();
+
                     Console.WriteLine("Informe a data de nascimento no formato dd/MM/yyyy");
-                    var inputDataLancamento = Console.ReadLine();
+                    var inputDataNascimento = Console.ReadLine();
 
                     Console.WriteLine("Os dados estão corretos?");
-                    Console.WriteLine($"Nome: {nomeAmigo}");
-                    Console.WriteLine($"Data de nascimento: {inputDataLancamento}");
+                    Console.WriteLine($"Nome: {nomeAmigo} {sobreNomeAmigo}");
+                    Console.WriteLine($"Data de nascimento: {inputDataNascimento}");
                     Console.WriteLine("1 - Sim \n2 - Não");
 
                     var opcaoParaAdicionar = Console.ReadLine();
 
                     if (opcaoParaAdicionar == "1")
                     {
-                        repositorio.Adicionar(new Dominio.Amigo(nomeAmigo, DateTime.Parse(inputDataLancamento)));
+                        repositorio.Adicionar(new Dominio.Amigo(nomeAmigo, sobreNomeAmigo, DateTime.Parse(inputDataNascimento)));
                         Console.WriteLine($"Dados adicionados com sucesso! {pressioneQualquerTecla}");
 
                     }
