@@ -46,7 +46,7 @@ namespace Rodrigo_Alves_Coelho_DR1_AT
                             var amigo = amigosEncontrados[indexAExibir];
 
                             Console.WriteLine("Dados da amigo");
-                            Console.WriteLine($"Nome: {amigo.Nome}");
+                            Console.WriteLine($"Nome: {amigo.Nome} {amigo.Sobrenome}");
                             Console.WriteLine($"Data de nascimento: {amigo.DataNascimento:dd/MM/yyyy}");
 
                             var qtdeTempo = amigo.CalcularIdade();
